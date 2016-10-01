@@ -1,3 +1,10 @@
+/*
+ *                        Copyright (C) 2006, 2016 by Rafael Santiago
+ *
+ * This is free software. You can redistribute it and/or modify under
+ * the terms of the GNU General Public License version 2.
+ *
+ */
 #include "eel.h"
 #include <ctype.h>
 #include <stdlib.h>
