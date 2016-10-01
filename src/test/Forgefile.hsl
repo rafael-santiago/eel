@@ -1,0 +1,49 @@
+include ~/toolsets/gcc/gcc-app.hsl
+
+var sources type list;
+var includes type list;
+var cflags type list;
+var libraries type list;
+var ldflags type list;
+
+project eel-unit : toolset "gcc-c-app" : $sources, $includes, $cflags, $libraries, $ldflags, "eel-tests";
+
+eel-unit.prologue() {
+    $sources.ls(".*\\.c$");
+    $includes.add_item("cutest/src");
+    $libraries.add_item("../lib");
+    $ldflags.add_item("-leel");
+    $libraries.add_item("cutest/src/lib");
+    $ldflags.add_item("-lcutest");
+    if (hefesto.sys.cd("cutest/src")) {
+        hefesto.sys.forge("cutest", "Forgefile.hsl", "--Forgefile-projects=cutest --obj-output-dir=obj --bin-output-dir=lib");
+        hefesto.sys.cd("../..");
+        if (hefesto.sys.last_forge_result() != 0) {
+            hefesto.project.abort(1);
+        }
+    }
+
+    if (hefesto.sys.os_name() == "linux") {
+        $ldflags.add_item("-ldl");
+        $ldflags.add_item("-lpthread");
+    }
+}
+
+eel-unit.epilogue() {
+    if (hefesto.sys.last_forge_result() == 0) {
+        var exit_code type int;
+        var eel_tests_path type string;
+
+        if (hefesto.sys.os_name() != "windows") {
+            $eel_tests_path = "bin/eel-tests";
+        } else {
+            $eel_tests_path = "bin\\eel-tests.exe";
+        }
+
+        $exit_code = hefesto.sys.run($eel_tests_path);
+
+        if ($exit_code != 0) {
+            hefesto.project.abort($exit_code);
+        }
+    }
+}
