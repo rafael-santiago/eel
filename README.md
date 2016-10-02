@@ -15,7 +15,7 @@ for looking inside the ``U-boat Enigma's`` entrails. For figuring out the proble
 engine in the past and also for understanding how ``Rejewski & Turing Bombs`` worked in order to crack this
 cipher. According to the historians the breakage of ``Enigma`` shortened the war and saved millions of lives.
 A rare moment which the intellectual power saved the day, rather different from this
-<a href="http://xkcd.com/208/" target="_vblank">one</a>!
+<a href="http://xkcd.com/208/" target="_blank">one</a>!
 
 ## How to build eel?
 
