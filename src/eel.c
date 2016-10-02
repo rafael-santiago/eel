@@ -165,6 +165,8 @@ int libeel_init_machine(libeel_enigma_ctx *enigma) {
     libeel_set_plugboard(enigma);
 
     libeel_set_reflector(libeel_reflector(enigma), enigma->reflector);
+
+    return 1;
 }
 
 static void libeel_set_rotor(libeel_rotor_wiring_t rotor, libeel_rotor_wiring_t rotor_inv, const libeel_rotor_t r) {
@@ -321,6 +323,9 @@ void libeel_del_enigma_ctx(libeel_enigma_ctx *enigma) {
 static void libeel_clear_enigma_ctx(libeel_enigma_ctx *enigma) {
     if (enigma != NULL) {
         memset(enigma, 0, sizeof(libeel_enigma_ctx));
+        libeel_ring(enigma, l) = 1;
+        libeel_ring(enigma, m) = 1;
+        libeel_ring(enigma, r) = 1;
     }
 }
 

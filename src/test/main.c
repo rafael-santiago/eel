@@ -30,6 +30,19 @@ CUTE_TEST_CASE(libeel_embedded_dsl_test)
 
     CUTE_ASSERT(memcmp(libeel_keyboard(e), null_rotor, sizeof(libeel_rotor_wiring_t)) == 0);
 
+    CUTE_ASSERT(libeel_plugboard(e, 1).l == 0);
+    CUTE_ASSERT(libeel_plugboard(e, 1).r == 0);
+    CUTE_ASSERT(libeel_plugboard(e, 2).l == 0);
+    CUTE_ASSERT(libeel_plugboard(e, 2).r == 0);
+    CUTE_ASSERT(libeel_plugboard(e, 3).l == 0);
+    CUTE_ASSERT(libeel_plugboard(e, 3).r == 0);
+    CUTE_ASSERT(libeel_plugboard(e, 4).l == 0);
+    CUTE_ASSERT(libeel_plugboard(e, 4).r == 0);
+    CUTE_ASSERT(libeel_plugboard(e, 5).l == 0);
+    CUTE_ASSERT(libeel_plugboard(e, 5).r == 0);
+    CUTE_ASSERT(libeel_plugboard(e, 6).l == 0);
+    CUTE_ASSERT(libeel_plugboard(e, 6).r == 0);
+
     CUTE_ASSERT(memcmp(libeel_rotor(e, l), null_rotor, sizeof(libeel_rotor_wiring_t)) == 0);
     CUTE_ASSERT(memcmp(libeel_rotor(e, m), null_rotor, sizeof(libeel_rotor_wiring_t)) == 0);
     CUTE_ASSERT(memcmp(libeel_rotor(e, r), null_rotor, sizeof(libeel_rotor_wiring_t)) == 0);
@@ -55,9 +68,9 @@ CUTE_TEST_CASE(libeel_embedded_dsl_test)
     CUTE_ASSERT(libeel_rotor_at(e, m) == 0);
     CUTE_ASSERT(libeel_rotor_at(e, r) == 0);
 
-    CUTE_ASSERT(libeel_ring(e, l) == 0);
-    CUTE_ASSERT(libeel_ring(e, m) == 0);
-    CUTE_ASSERT(libeel_ring(e, r) == 0);
+    CUTE_ASSERT(libeel_ring(e, l) == 1);
+    CUTE_ASSERT(libeel_ring(e, m) == 1);
+    CUTE_ASSERT(libeel_ring(e, r) == 1);
 
     CUTE_ASSERT(libeel_enigma_input(e) == 0);
     CUTE_ASSERT(libeel_enigma_output(e) == 0);
@@ -65,9 +78,49 @@ CUTE_TEST_CASE(libeel_embedded_dsl_test)
     libeel_del_enigma_ctx(e);
 CUTE_TEST_CASE_END
 
+CUTE_TEST_CASE(libeel_init_machine_test)
+    libeel_enigma_ctx *e = libeel_new_enigma_ctx();
+    e->left_rotor = iv;
+    e->middle_rotor = i;
+    e->right_rotor = ii;
+    e->reflector = c;
+    libeel_plugboard(e, 1).l = 'x';
+    libeel_plugboard(e, 1).r = 'a';
+    libeel_plugboard(e, 2).l = 'Z';
+    libeel_plugboard(e, 2).r = 'Y';
+    libeel_plugboard(e, 3).l = 'B';
+    libeel_plugboard(e, 3).r = 'D';
+    libeel_plugboard(e, 6).l = 'k';
+    libeel_plugboard(e, 6).r = 'F';
+    CUTE_ASSERT(libeel_init_machine(e) == 1);
+    libeel_del_enigma_ctx(e);
+CUTE_TEST_CASE_END
+
+CUTE_TEST_CASE(libeel_type_test)
+    libeel_enigma_ctx *e_uboat = libeel_new_enigma_ctx();
+    char *expected_outputs = "PXWIAFZZLY", *ep = NULL;
+    e_uboat->left_rotor = i;
+    e_uboat->middle_rotor = ii;
+    e_uboat->right_rotor = iii;
+    libeel_rotor_at(e_uboat, l) = 'A';
+    libeel_rotor_at(e_uboat, m) = 'A';
+    libeel_rotor_at(e_uboat, r) = 'Z';
+    e_uboat->reflector = b;
+    CUTE_ASSERT(libeel_init_machine(e_uboat) == 1);
+    libeel_enigma_input(e_uboat) = 'G';
+    for (ep = expected_outputs; *ep != 0; ep++) {
+        libeel_type(e_uboat);
+        CUTE_ASSERT(libeel_enigma_output(e_uboat) == *ep);
+        printf("\t%c->%c [ok]\n", libeel_enigma_input(e_uboat), libeel_enigma_output(e_uboat));
+    }
+    libeel_del_enigma_ctx(e_uboat);
+CUTE_TEST_CASE_END
+
 CUTE_TEST_CASE(eel_tests)
     CUTE_RUN_TEST(libeel_enigma_ctx_test);
     CUTE_RUN_TEST(libeel_embedded_dsl_test);
+    CUTE_RUN_TEST(libeel_init_machine_test);
+    CUTE_RUN_TEST(libeel_type_test);
 CUTE_TEST_CASE_END
 
 CUTE_MAIN(eel_tests);
