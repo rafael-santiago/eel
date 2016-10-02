@@ -14,8 +14,7 @@ Alternatively, ``Enigma`` has a strong historical value. Then here you can probe
 for looking inside the ``U-boat Enigma's`` entrails. For figuring out the problem imposed by this cipher
 engine in the past and also for understanding how ``Rejewski & Turing Bombs`` worked in order to crack this
 cipher. According to the historians the breakage of ``Enigma`` shortened the war and saved millions of lives.
-A rare moment which the intellectual power saved the day, rather different from this
-<a href="http://xkcd.com/208/" target="_blank">one</a>!
+A rare moment which the intellectual power really saved the day, rather different from this [one](http://xkcd.com/208/)!
 
 ## How to build eel?
 
