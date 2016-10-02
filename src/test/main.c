@@ -80,6 +80,119 @@ CUTE_TEST_CASE_END
 
 CUTE_TEST_CASE(libeel_init_machine_test)
     libeel_enigma_ctx *e = libeel_new_enigma_ctx();
+
+    e->left_rotor = -1;
+    e->middle_rotor = i;
+    e->right_rotor = ii;
+    e->reflector = c;
+    libeel_plugboard(e, 1).l = 'x';
+    libeel_plugboard(e, 1).r = 'a';
+    libeel_plugboard(e, 2).l = 'Z';
+    libeel_plugboard(e, 2).r = 'Y';
+    libeel_plugboard(e, 3).l = 'B';
+    libeel_plugboard(e, 3).r = 'D';
+    libeel_plugboard(e, 6).l = 'k';
+    libeel_plugboard(e, 6).r = 'F';
+    CUTE_ASSERT(libeel_init_machine(e) == 0);
+
+    e->left_rotor = iv;
+    e->middle_rotor = -1;
+    e->right_rotor = ii;
+    e->reflector = c;
+    libeel_plugboard(e, 1).l = 'x';
+    libeel_plugboard(e, 1).r = 'a';
+    libeel_plugboard(e, 2).l = 'Z';
+    libeel_plugboard(e, 2).r = 'Y';
+    libeel_plugboard(e, 3).l = 'B';
+    libeel_plugboard(e, 3).r = 'D';
+    libeel_plugboard(e, 6).l = 'k';
+    libeel_plugboard(e, 6).r = 'F';
+    CUTE_ASSERT(libeel_init_machine(e) == 0);
+
+    e->left_rotor = iv;
+    e->middle_rotor = i;
+    e->right_rotor = -1;
+    e->reflector = c;
+    libeel_plugboard(e, 1).l = 'x';
+    libeel_plugboard(e, 1).r = 'a';
+    libeel_plugboard(e, 2).l = 'Z';
+    libeel_plugboard(e, 2).r = 'Y';
+    libeel_plugboard(e, 3).l = 'B';
+    libeel_plugboard(e, 3).r = 'D';
+    libeel_plugboard(e, 6).l = 'k';
+    libeel_plugboard(e, 6).r = 'F';
+    CUTE_ASSERT(libeel_init_machine(e) == 0);
+
+    e->left_rotor = iv;
+    e->middle_rotor = i;
+    e->right_rotor = ii;
+    e->reflector = -1;
+    libeel_plugboard(e, 1).l = 'x';
+    libeel_plugboard(e, 1).r = 'a';
+    libeel_plugboard(e, 2).l = 'Z';
+    libeel_plugboard(e, 2).r = 'Y';
+    libeel_plugboard(e, 3).l = 'B';
+    libeel_plugboard(e, 3).r = 'D';
+    libeel_plugboard(e, 6).l = 'k';
+    libeel_plugboard(e, 6).r = 'F';
+    CUTE_ASSERT(libeel_init_machine(e) == 0);
+
+    e->left_rotor = iv;
+    e->middle_rotor = i;
+    e->right_rotor = ii;
+    e->reflector = c;
+    libeel_plugboard(e, 1).l = 'x';
+    libeel_plugboard(e, 1).r = 'a';
+    libeel_plugboard(e, 2).l = 'a';
+    libeel_plugboard(e, 2).r = 'Y';
+    libeel_plugboard(e, 3).l = 'B';
+    libeel_plugboard(e, 3).r = 'D';
+    libeel_plugboard(e, 6).l = 'k';
+    libeel_plugboard(e, 6).r = 'F';
+    CUTE_ASSERT(libeel_init_machine(e) == 0);
+
+    e->left_rotor = iv;
+    e->middle_rotor = i;
+    e->right_rotor = ii;
+    e->reflector = c;
+    libeel_plugboard(e, 1).l = 'x';
+    libeel_plugboard(e, 1).r = 'a';
+    libeel_plugboard(e, 2).l = 'Z';
+    libeel_plugboard(e, 2).r = 'Y';
+    libeel_plugboard(e, 3).l = 'Z';
+    libeel_plugboard(e, 3).r = 'D';
+    libeel_plugboard(e, 6).l = 'k';
+    libeel_plugboard(e, 6).r = 'F';
+    CUTE_ASSERT(libeel_init_machine(e) == 0);
+
+    e->left_rotor = iv;
+    e->middle_rotor = i;
+    e->right_rotor = ii;
+    e->reflector = c;
+    libeel_plugboard(e, 1).l = 'x';
+    libeel_plugboard(e, 1).r = 'a';
+    libeel_plugboard(e, 2).l = 'Z';
+    libeel_plugboard(e, 2).r = 'Y';
+    libeel_plugboard(e, 3).l = 'B';
+    libeel_plugboard(e, 3).r = 'Y';
+    libeel_plugboard(e, 6).l = 'k';
+    libeel_plugboard(e, 6).r = 'F';
+    CUTE_ASSERT(libeel_init_machine(e) == 0);
+
+    e->left_rotor = iv;
+    e->middle_rotor = i;
+    e->right_rotor = ii;
+    e->reflector = c;
+    libeel_plugboard(e, 1).l = 'x';
+    libeel_plugboard(e, 1).r = 'a';
+    libeel_plugboard(e, 2).l = 'Z';
+    libeel_plugboard(e, 2).r = 'Y';
+    libeel_plugboard(e, 3).l = 'B';
+    libeel_plugboard(e, 3).r = 'D';
+    libeel_plugboard(e, 6).l = 'D';
+    libeel_plugboard(e, 6).r = 'F';
+    CUTE_ASSERT(libeel_init_machine(e) == 0);
+
     e->left_rotor = iv;
     e->middle_rotor = i;
     e->right_rotor = ii;

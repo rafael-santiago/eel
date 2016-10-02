@@ -13,5 +13,5 @@ Do not be naive.
 Alternatively, ``Enigma`` has a strong historical value. Then here you can probe the library's source code
 for looking inside the ``U-boat Enigma's`` entrails. For figuring out the problem imposed by this cipher
 engine in the past and also for understanding how ``Rejewski & Turing Bombs`` worked in order to crack this
-cipher. What shortened the war and saved millions of lives according to historians.
+cipher. According to the historians the breakage of ``Enigma`` shortened the war and saved millions of lives.
 

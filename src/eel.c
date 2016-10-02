@@ -16,83 +16,114 @@ struct libeel_rotor_wiring_ctx {
 };
 
 static struct libeel_rotor_wiring_ctx g_rotor_wiring[] = {
-    { {
-        'E', 'K', 'M', 'F', 'L', 'G', 'D', 'Q', 'V', 'Z', 'N', 'T', 'O', 'W', 'Y', 'H', 'X', 'U', 'S', 'P', 'A', 'I', 'B', 'R', 'C', 'J'
-      },
-      {
-        'U', 'W', 'Y', 'G', 'A', 'D', 'F', 'P', 'V', 'Z', 'B', 'E', 'C', 'K', 'M', 'T', 'H', 'X', 'S', 'L', 'R', 'I', 'N', 'Q', 'O', 'J'
-      },
-      'R'
+    {
+        {
+            'E', 'K', 'M', 'F', 'L', 'G', 'D', 'Q', 'V', 'Z', 'N', 'T', 'O',
+            'W', 'Y', 'H', 'X', 'U', 'S', 'P', 'A', 'I', 'B', 'R', 'C', 'J'
+        },
+        {
+            'U', 'W', 'Y', 'G', 'A', 'D', 'F', 'P', 'V', 'Z', 'B', 'E', 'C',
+            'K', 'M', 'T', 'H', 'X', 'S', 'L', 'R', 'I', 'N', 'Q', 'O', 'J'
+        },
+        'R'
     },
-    { {
-        'A', 'J', 'D', 'K', 'S', 'I', 'R', 'U', 'X', 'B', 'L', 'H', 'W', 'T', 'M', 'C', 'Q', 'G', 'Z', 'N', 'P', 'Y', 'F', 'V', 'O', 'E'
-      },
-      {
-        'A', 'J', 'P', 'C', 'Z', 'W', 'R', 'L', 'F', 'B', 'D', 'K', 'O', 'T', 'Y', 'U', 'Q', 'G', 'E', 'N', 'H', 'X', 'M', 'I', 'V', 'S'
-      },
-      'F'
+    {
+        {
+            'A', 'J', 'D', 'K', 'S', 'I', 'R', 'U', 'X', 'B', 'L', 'H', 'W',
+            'T', 'M', 'C', 'Q', 'G', 'Z', 'N', 'P', 'Y', 'F', 'V', 'O', 'E'
+        },
+        {
+            'A', 'J', 'P', 'C', 'Z', 'W', 'R', 'L', 'F', 'B', 'D', 'K', 'O',
+            'T', 'Y', 'U', 'Q', 'G', 'E', 'N', 'H', 'X', 'M', 'I', 'V', 'S'
+        },
+        'F'
     },
-    { {
-        'B', 'D', 'F', 'H', 'J', 'L', 'C', 'P', 'R', 'T', 'X', 'V', 'Z', 'N', 'Y', 'E', 'I', 'W', 'G', 'A', 'K', 'M', 'U', 'S', 'Q', 'O'
-      },
-      {
-        'T', 'A', 'G', 'B', 'P', 'C', 'S', 'D', 'Q', 'E', 'U', 'F', 'V', 'N', 'Z', 'H', 'Y', 'I', 'X', 'J', 'W', 'L', 'R', 'K', 'O', 'M'
-      },
-      'W'
+    {
+        {
+            'B', 'D', 'F', 'H', 'J', 'L', 'C', 'P', 'R', 'T', 'X', 'V', 'Z',
+            'N', 'Y', 'E', 'I', 'W', 'G', 'A', 'K', 'M', 'U', 'S', 'Q', 'O'
+        },
+        {
+            'T', 'A', 'G', 'B', 'P', 'C', 'S', 'D', 'Q', 'E', 'U', 'F', 'V',
+            'N', 'Z', 'H', 'Y', 'I', 'X', 'J', 'W', 'L', 'R', 'K', 'O', 'M'
+        },
+        'W'
     },
-    { {
-        'E', 'S', 'O', 'V', 'P', 'Z', 'J', 'A', 'Y', 'Q', 'U', 'I', 'R', 'H', 'X', 'L', 'N', 'F', 'T', 'G', 'K', 'D', 'C', 'M', 'W', 'B'
-      },
-      {
-        'H', 'Z', 'W', 'V', 'A', 'R', 'T', 'N', 'L', 'G', 'U', 'P', 'X', 'Q', 'C', 'E', 'J', 'M', 'B', 'S', 'K', 'D', 'Y', 'O', 'I', 'F'
-      },
-      'K'
+    {
+        {
+            'E', 'S', 'O', 'V', 'P', 'Z', 'J', 'A', 'Y', 'Q', 'U', 'I', 'R',
+            'H', 'X', 'L', 'N', 'F', 'T', 'G', 'K', 'D', 'C', 'M', 'W', 'B'
+        },
+        {
+            'H', 'Z', 'W', 'V', 'A', 'R', 'T', 'N', 'L', 'G', 'U', 'P', 'X',
+            'Q', 'C', 'E', 'J', 'M', 'B', 'S', 'K', 'D', 'Y', 'O', 'I', 'F'
+        },
+        'K'
     },
-    { {
-        'V', 'Z', 'B', 'R', 'G', 'I', 'T', 'Y', 'U', 'P', 'S', 'D', 'N', 'H', 'L', 'X', 'A', 'W', 'M', 'J', 'Q', 'O', 'F', 'E', 'C', 'K'
-      },
-      {
-        'Q', 'C', 'Y', 'L', 'X', 'W', 'E', 'N', 'F', 'T', 'Z', 'O', 'S', 'M', 'V', 'J', 'U', 'D', 'K', 'G', 'I', 'A', 'R', 'P', 'H', 'B'
-      },
-      'A'
+    {
+        {
+            'V', 'Z', 'B', 'R', 'G', 'I', 'T', 'Y', 'U', 'P', 'S', 'D', 'N',
+            'H', 'L', 'X', 'A', 'W', 'M', 'J', 'Q', 'O', 'F', 'E', 'C', 'K'
+        },
+        {
+            'Q', 'C', 'Y', 'L', 'X', 'W', 'E', 'N', 'F', 'T', 'Z', 'O', 'S',
+            'M', 'V', 'J', 'U', 'D', 'K', 'G', 'I', 'A', 'R', 'P', 'H', 'B'
+        },
+        'A'
     },
-    { {
-        'J', 'P', 'G', 'V', 'O', 'U', 'M', 'F', 'Y', 'Q', 'B', 'E', 'N', 'H', 'Z', 'R', 'D', 'K', 'A', 'S', 'X', 'L', 'I', 'C', 'T', 'W'
-      },
-      {
-        'S', 'K', 'X', 'Q', 'L', 'H', 'C', 'N', 'W', 'A', 'R', 'V', 'G', 'M', 'E', 'B', 'J', 'P', 'T', 'Y', 'F', 'D', 'Z', 'U', 'I', 'O'
-      },
-      'A'
+    {
+        {
+            'J', 'P', 'G', 'V', 'O', 'U', 'M', 'F', 'Y', 'Q', 'B', 'E', 'N',
+            'H', 'Z', 'R', 'D', 'K', 'A', 'S', 'X', 'L', 'I', 'C', 'T', 'W'
+        },
+        {
+            'S', 'K', 'X', 'Q', 'L', 'H', 'C', 'N', 'W', 'A', 'R', 'V', 'G',
+            'M', 'E', 'B', 'J', 'P', 'T', 'Y', 'F', 'D', 'Z', 'U', 'I', 'O'
+        },
+        'A'
     },
-    { {
-        'N', 'Z', 'J', 'H', 'G', 'R', 'C', 'X', 'M', 'Y', 'S', 'W', 'B', 'O', 'U', 'F', 'A', 'I', 'V', 'L', 'P', 'E', 'K', 'Q', 'D', 'T'
-      },
-      {
-        'Q', 'M', 'G', 'Y', 'V', 'P', 'E', 'D', 'R', 'C', 'W', 'T', 'I', 'A', 'N', 'U', 'X', 'F', 'K', 'Z', 'O', 'S', 'L', 'H', 'J', 'B'
-      },
-      'A'
+    {
+        {
+            'N', 'Z', 'J', 'H', 'G', 'R', 'C', 'X', 'M', 'Y', 'S', 'W', 'B',
+            'O', 'U', 'F', 'A', 'I', 'V', 'L', 'P', 'E', 'K', 'Q', 'D', 'T'
+        },
+        {
+            'Q', 'M', 'G', 'Y', 'V', 'P', 'E', 'D', 'R', 'C', 'W', 'T', 'I',
+            'A', 'N', 'U', 'X', 'F', 'K', 'Z', 'O', 'S', 'L', 'H', 'J', 'B'
+        },
+        'A'
     },
-    { {
-        'F', 'K', 'Q', 'H', 'T', 'L', 'X', 'O', 'C', 'B', 'J', 'S', 'P', 'D', 'Z', 'R', 'A', 'M', 'E', 'W', 'N', 'I', 'U', 'Y', 'G', 'V'
-      },
-      {
-        'Q', 'J', 'I', 'N', 'S', 'A', 'Y', 'D', 'V', 'K', 'B', 'F', 'R', 'U', 'H', 'M', 'C', 'P', 'L', 'E', 'W', 'Z', 'T', 'G', 'X', 'O'
-      },
-      'N'
+    {
+        {
+            'F', 'K', 'Q', 'H', 'T', 'L', 'X', 'O', 'C', 'B', 'J', 'S', 'P',
+            'D', 'Z', 'R', 'A', 'M', 'E', 'W', 'N', 'I', 'U', 'Y', 'G', 'V'
+        },
+        {
+            'Q', 'J', 'I', 'N', 'S', 'A', 'Y', 'D', 'V', 'K', 'B', 'F', 'R',
+            'U', 'H', 'M', 'C', 'P', 'L', 'E', 'W', 'Z', 'T', 'G', 'X', 'O'
+        },
+        'N'
     }
 };
 
 static size_t g_rotor_wiring_nr = sizeof(g_rotor_wiring) / sizeof(g_rotor_wiring[0]);
 
 static libeel_rotor_wiring_t g_reflector[] = {
-    { 'Y', 'R', 'U', 'H', 'Q', 'S', 'L', 'D', 'P', 'X', 'N', 'G', 'O', 'K', 'M', 'I', 'E', 'R', 'F', 'Z', 'C', 'W', 'V', 'J', 'A', 'T' },
-    { 'F', 'V', 'P', 'J', 'I', 'A', 'O', 'Y', 'E', 'D', 'R', 'Z', 'X', 'W', 'G', 'C', 'T', 'K', 'U', 'Q', 'S', 'B', 'N', 'M', 'H', 'L' }
+    {
+        'Y', 'R', 'U', 'H', 'Q', 'S', 'L', 'D', 'P', 'X', 'N', 'G', 'O',
+        'K', 'M', 'I', 'E', 'R', 'F', 'Z', 'C', 'W', 'V', 'J', 'A', 'T'
+    },
+    {
+        'F', 'V', 'P', 'J', 'I', 'A', 'O', 'Y', 'E', 'D', 'R', 'Z', 'X',
+        'W', 'G', 'C', 'T', 'K', 'U', 'Q', 'S', 'B', 'N', 'M', 'H', 'L'
+    }
 };
 
 static size_t g_reflector_nr = sizeof(g_reflector) / sizeof(g_reflector[0]);
 
 static libeel_rotor_wiring_t g_basic_display = {
-    'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+    'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+    'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
 };
 
 static void libeel_set_rotor(libeel_rotor_wiring_t rotor, libeel_rotor_wiring_t rotor_inv, const libeel_rotor_t r);
@@ -113,11 +144,17 @@ static libeel_rotor_display_t libeel_get_rotor_signal(const libeel_rotor_wiring_
 
 static void libeel_refresh_display(libeel_rotor_display_t *display);
 
+static int libeel_setting_sanity_check(const libeel_enigma_ctx *enigma);
+
 int libeel_init_machine(libeel_enigma_ctx *enigma) {
 
     libeel_ring_t r;
 
     if (enigma == NULL) {
+        return 0;
+    }
+
+    if (!libeel_setting_sanity_check(enigma)) {
         return 0;
     }
 
@@ -363,4 +400,151 @@ static void libeel_refresh_display(libeel_rotor_display_t *display) {
     if (*display == 0) {
         *display = 'A';
     }
+}
+
+static int libeel_setting_sanity_check(const libeel_enigma_ctx *enigma) {
+    if (enigma == NULL) {
+        return 0;
+    }
+
+    if (!(enigma->left_rotor >= i && enigma->left_rotor <= viii)) {
+        return 0;
+    }
+
+    if (!(enigma->middle_rotor >= i && enigma->middle_rotor <= viii)) {
+        return 0;
+    }
+
+    if (!(enigma->right_rotor >= i && enigma->right_rotor <= viii)) {
+        return 0;
+    }
+
+    if (enigma->left_rotor  == enigma->right_rotor   ||
+        enigma->left_rotor  == enigma->middle_rotor  ||
+        enigma->right_rotor == enigma->middle_rotor) {
+        return 0;
+    }
+
+    if (!(enigma->reflector >= b && enigma->reflector <= c)) {
+        return 0;
+    }
+
+    if (!(libeel_ring(enigma, l) >= 1 && libeel_ring(enigma, l) <= 26)) {
+        return 0;
+    }
+
+    if (!(libeel_ring(enigma, m) >= 1 && libeel_ring(enigma, m) <= 26)) {
+        return 0;
+    }
+
+    if (!(libeel_ring(enigma, r) >= 1 && libeel_ring(enigma, r) <= 26)) {
+        return 0;
+    }
+
+    if ((libeel_plugboard(enigma, 1).l != 0 && !isalpha(libeel_plugboard(enigma, 1).l)) ||
+        (libeel_plugboard(enigma, 1).r != 0 && !isalpha(libeel_plugboard(enigma, 1).r)) ||
+        (libeel_plugboard(enigma, 1).l != 0 && libeel_plugboard(enigma, 1).r == 0)      ||
+        (libeel_plugboard(enigma, 1).r != 0 && libeel_plugboard(enigma, 1).l == 0)) {
+        return 0;
+    }
+
+    if ((libeel_plugboard(enigma, 2).l != 0 && !isalpha(libeel_plugboard(enigma, 2).l)) ||
+        (libeel_plugboard(enigma, 2).r != 0 && !isalpha(libeel_plugboard(enigma, 2).r)) ||
+        (libeel_plugboard(enigma, 2).l != 0 && libeel_plugboard(enigma, 2).r == 0)      ||
+        (libeel_plugboard(enigma, 2).r != 0 && libeel_plugboard(enigma, 2).l == 0)) {
+        return 0;
+    }
+
+    if ((libeel_plugboard(enigma, 3).l != 0 && !isalpha(libeel_plugboard(enigma, 3).l)) ||
+        (libeel_plugboard(enigma, 3).r != 0 && !isalpha(libeel_plugboard(enigma, 3).r)) ||
+        (libeel_plugboard(enigma, 3).l != 0 && libeel_plugboard(enigma, 3).r == 0)      ||
+        (libeel_plugboard(enigma, 3).r != 0 && libeel_plugboard(enigma, 3).l == 0)) {
+        return 0;
+    }
+
+    if ((libeel_plugboard(enigma, 4).l != 0 && !isalpha(libeel_plugboard(enigma, 4).l)) ||
+        (libeel_plugboard(enigma, 4).r != 0 && !isalpha(libeel_plugboard(enigma, 4).r)) ||
+        (libeel_plugboard(enigma, 4).l != 0 && libeel_plugboard(enigma, 4).r == 0)      ||
+        (libeel_plugboard(enigma, 4).r != 0 && libeel_plugboard(enigma, 4).l == 0)) {
+        return 0;
+    }
+
+    if ((libeel_plugboard(enigma, 5).l != 0 && !isalpha(libeel_plugboard(enigma, 5).l)) ||
+        (libeel_plugboard(enigma, 5).r != 0 && !isalpha(libeel_plugboard(enigma, 5).r)) ||
+        (libeel_plugboard(enigma, 5).l != 0 && libeel_plugboard(enigma, 5).r == 0)      ||
+        (libeel_plugboard(enigma, 5).r != 0 && libeel_plugboard(enigma, 5).l == 0)) {
+        return 0;
+    }
+
+    if ((libeel_plugboard(enigma, 6).l != 0 && !isalpha(libeel_plugboard(enigma, 6).l)) ||
+        (libeel_plugboard(enigma, 6).r != 0 && !isalpha(libeel_plugboard(enigma, 6).r)) ||
+        (libeel_plugboard(enigma, 6).l != 0 && libeel_plugboard(enigma, 6).r == 0)      ||
+        (libeel_plugboard(enigma, 6).r != 0 && libeel_plugboard(enigma, 6).l == 0)) {
+        return 0;
+    }
+
+    if ((libeel_plugboard(enigma, 1).l > 0 && libeel_plugboard(enigma, 1).l == libeel_plugboard(enigma, 2).l) ||
+        (libeel_plugboard(enigma, 1).l > 0 && libeel_plugboard(enigma, 1).l == libeel_plugboard(enigma, 2).r) ||
+        (libeel_plugboard(enigma, 1).l > 0 && libeel_plugboard(enigma, 1).l == libeel_plugboard(enigma, 3).l) ||
+        (libeel_plugboard(enigma, 1).l > 0 && libeel_plugboard(enigma, 1).l == libeel_plugboard(enigma, 3).r) ||
+        (libeel_plugboard(enigma, 1).l > 0 && libeel_plugboard(enigma, 1).l == libeel_plugboard(enigma, 4).l) ||
+        (libeel_plugboard(enigma, 1).l > 0 && libeel_plugboard(enigma, 1).l == libeel_plugboard(enigma, 4).r) ||
+        (libeel_plugboard(enigma, 1).l > 0 && libeel_plugboard(enigma, 1).l == libeel_plugboard(enigma, 5).l) ||
+        (libeel_plugboard(enigma, 1).l > 0 && libeel_plugboard(enigma, 1).l == libeel_plugboard(enigma, 5).r) ||
+        (libeel_plugboard(enigma, 1).l > 0 && libeel_plugboard(enigma, 1).l == libeel_plugboard(enigma, 6).l) ||
+        (libeel_plugboard(enigma, 1).l > 0 && libeel_plugboard(enigma, 1).l == libeel_plugboard(enigma, 6).r) ||
+        (libeel_plugboard(enigma, 1).l > 0 && libeel_plugboard(enigma, 1).r == libeel_plugboard(enigma, 2).l) ||
+        (libeel_plugboard(enigma, 1).r > 0 && libeel_plugboard(enigma, 1).r == libeel_plugboard(enigma, 2).r) ||
+        (libeel_plugboard(enigma, 1).r > 0 && libeel_plugboard(enigma, 1).r == libeel_plugboard(enigma, 3).l) ||
+        (libeel_plugboard(enigma, 1).r > 0 && libeel_plugboard(enigma, 1).r == libeel_plugboard(enigma, 3).r) ||
+        (libeel_plugboard(enigma, 1).r > 0 && libeel_plugboard(enigma, 1).r == libeel_plugboard(enigma, 4).l) ||
+        (libeel_plugboard(enigma, 1).r > 0 && libeel_plugboard(enigma, 1).r == libeel_plugboard(enigma, 4).r) ||
+        (libeel_plugboard(enigma, 1).r > 0 && libeel_plugboard(enigma, 1).r == libeel_plugboard(enigma, 5).l) ||
+        (libeel_plugboard(enigma, 1).r > 0 && libeel_plugboard(enigma, 1).r == libeel_plugboard(enigma, 5).r) ||
+        (libeel_plugboard(enigma, 1).r > 0 && libeel_plugboard(enigma, 1).r == libeel_plugboard(enigma, 6).l) ||
+        (libeel_plugboard(enigma, 1).r > 0 && libeel_plugboard(enigma, 1).r == libeel_plugboard(enigma, 6).r) ||
+        (libeel_plugboard(enigma, 2).l > 0 && libeel_plugboard(enigma, 2).l == libeel_plugboard(enigma, 3).l) ||
+        (libeel_plugboard(enigma, 2).l > 0 && libeel_plugboard(enigma, 2).l == libeel_plugboard(enigma, 3).r) ||
+        (libeel_plugboard(enigma, 2).l > 0 && libeel_plugboard(enigma, 2).l == libeel_plugboard(enigma, 4).l) ||
+        (libeel_plugboard(enigma, 2).l > 0 && libeel_plugboard(enigma, 2).l == libeel_plugboard(enigma, 4).r) ||
+        (libeel_plugboard(enigma, 2).l > 0 && libeel_plugboard(enigma, 2).l == libeel_plugboard(enigma, 5).l) ||
+        (libeel_plugboard(enigma, 2).l > 0 && libeel_plugboard(enigma, 2).l == libeel_plugboard(enigma, 5).r) ||
+        (libeel_plugboard(enigma, 2).l > 0 && libeel_plugboard(enigma, 2).l == libeel_plugboard(enigma, 6).l) ||
+        (libeel_plugboard(enigma, 2).l > 0 && libeel_plugboard(enigma, 2).l == libeel_plugboard(enigma, 6).r) ||
+        (libeel_plugboard(enigma, 2).l > 0 && libeel_plugboard(enigma, 2).r == libeel_plugboard(enigma, 3).l) ||
+        (libeel_plugboard(enigma, 2).r > 0 && libeel_plugboard(enigma, 2).r == libeel_plugboard(enigma, 3).r) ||
+        (libeel_plugboard(enigma, 2).r > 0 && libeel_plugboard(enigma, 2).r == libeel_plugboard(enigma, 4).l) ||
+        (libeel_plugboard(enigma, 2).r > 0 && libeel_plugboard(enigma, 2).r == libeel_plugboard(enigma, 4).r) ||
+        (libeel_plugboard(enigma, 2).r > 0 && libeel_plugboard(enigma, 2).r == libeel_plugboard(enigma, 5).l) ||
+        (libeel_plugboard(enigma, 2).r > 0 && libeel_plugboard(enigma, 2).r == libeel_plugboard(enigma, 5).r) ||
+        (libeel_plugboard(enigma, 2).r > 0 && libeel_plugboard(enigma, 2).r == libeel_plugboard(enigma, 6).l) ||
+        (libeel_plugboard(enigma, 2).r > 0 && libeel_plugboard(enigma, 2).r == libeel_plugboard(enigma, 6).r) ||
+        (libeel_plugboard(enigma, 3).l > 0 && libeel_plugboard(enigma, 3).l == libeel_plugboard(enigma, 4).l) ||
+        (libeel_plugboard(enigma, 3).l > 0 && libeel_plugboard(enigma, 3).l == libeel_plugboard(enigma, 4).r) ||
+        (libeel_plugboard(enigma, 3).l > 0 && libeel_plugboard(enigma, 3).l == libeel_plugboard(enigma, 5).l) ||
+        (libeel_plugboard(enigma, 3).l > 0 && libeel_plugboard(enigma, 3).l == libeel_plugboard(enigma, 5).r) ||
+        (libeel_plugboard(enigma, 3).l > 0 && libeel_plugboard(enigma, 3).l == libeel_plugboard(enigma, 6).l) ||
+        (libeel_plugboard(enigma, 3).l > 0 && libeel_plugboard(enigma, 3).l == libeel_plugboard(enigma, 6).r) ||
+        (libeel_plugboard(enigma, 3).r > 0 && libeel_plugboard(enigma, 3).r == libeel_plugboard(enigma, 4).l) ||
+        (libeel_plugboard(enigma, 3).r > 0 && libeel_plugboard(enigma, 3).r == libeel_plugboard(enigma, 4).r) ||
+        (libeel_plugboard(enigma, 3).r > 0 && libeel_plugboard(enigma, 3).r == libeel_plugboard(enigma, 5).l) ||
+        (libeel_plugboard(enigma, 3).r > 0 && libeel_plugboard(enigma, 3).r == libeel_plugboard(enigma, 5).r) ||
+        (libeel_plugboard(enigma, 3).r > 0 && libeel_plugboard(enigma, 3).r == libeel_plugboard(enigma, 6).l) ||
+        (libeel_plugboard(enigma, 3).r > 0 && libeel_plugboard(enigma, 3).r == libeel_plugboard(enigma, 6).r) ||
+        (libeel_plugboard(enigma, 4).l > 0 && libeel_plugboard(enigma, 4).l == libeel_plugboard(enigma, 5).l) ||
+        (libeel_plugboard(enigma, 4).l > 0 && libeel_plugboard(enigma, 4).l == libeel_plugboard(enigma, 5).r) ||
+        (libeel_plugboard(enigma, 4).l > 0 && libeel_plugboard(enigma, 4).l == libeel_plugboard(enigma, 6).l) ||
+        (libeel_plugboard(enigma, 4).l > 0 && libeel_plugboard(enigma, 4).l == libeel_plugboard(enigma, 6).r) ||
+        (libeel_plugboard(enigma, 4).r > 0 && libeel_plugboard(enigma, 4).r == libeel_plugboard(enigma, 5).l) ||
+        (libeel_plugboard(enigma, 4).r > 0 && libeel_plugboard(enigma, 4).r == libeel_plugboard(enigma, 5).r) ||
+        (libeel_plugboard(enigma, 4).r > 0 && libeel_plugboard(enigma, 4).r == libeel_plugboard(enigma, 6).l) ||
+        (libeel_plugboard(enigma, 4).r > 0 && libeel_plugboard(enigma, 4).r == libeel_plugboard(enigma, 6).r) ||
+        (libeel_plugboard(enigma, 5).l > 0 && libeel_plugboard(enigma, 5).l == libeel_plugboard(enigma, 6).l) ||
+        (libeel_plugboard(enigma, 5).l > 0 && libeel_plugboard(enigma, 5).l == libeel_plugboard(enigma, 6).r) ||
+        (libeel_plugboard(enigma, 5).r > 0 && libeel_plugboard(enigma, 5).r == libeel_plugboard(enigma, 6).l) ||
+        (libeel_plugboard(enigma, 5).r > 0 && libeel_plugboard(enigma, 5).r == libeel_plugboard(enigma, 6).r)) {
+        return 0;
+    }
+
+    return 1;
 }
