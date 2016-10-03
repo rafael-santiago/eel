@@ -235,7 +235,7 @@ Now all you should do is to read the output signal (e.g.: the lamp On).
 The **Table 2** gathers these statements. They were exposed in order to allow future extensions by everyone interested.
 For this reason I will avoid detailing why and for what it should be used.
 
-**Table 2**: The ``Eel's Enigma geeks embedded dsl statements``
+**Table 2**: The ``Eel's Enigma geek embedded dsl statements``.
 
 |      **Statement**           |                **Used for**                      |          **Usage sample**             |
 |:----------------------------:|:------------------------------------------------:|:-------------------------------------:|
