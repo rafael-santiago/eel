@@ -228,7 +228,8 @@ One the input signal defined:
     libeel_type(M3);
 ```
 
-Now all you should do is to read the output signal (e.g.: the lamp On).
+Now all you should do is to read the output signal (e.g.: the lamp On). However, the ``libeel_type()`` also
+returns its result besides "turn-on" the output lamp.
 
 ### Another dsl statements which final users should not worry about
 
