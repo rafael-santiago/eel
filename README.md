@@ -150,7 +150,7 @@ about it.
 
 **Beware**: All other fields accessing is by your own risk. I also think that you think that ``protected`` is for sissies. So...
 
-The rotors can be set with: ``i``, ``ii``, ``iii``, ``iv``, ``v``, ``vi``, ``vii``, ``viii``. I really find roman numbers a
+The rotors can be set with: ``i``, ``ii``, ``iii``, ``iv``, ``v``, ``vi``, ``vii``, ``viii``. I really find roman numerals a
 monument in the name of Human stupidity but commonly the ``Enigma's rotors`` are expressed on this way. So is what we get!
 
 The reflectors can assume two values (all here at least until now is about U-boats, rememeber?): ``b`` and ``c``.
