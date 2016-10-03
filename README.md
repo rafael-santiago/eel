@@ -16,6 +16,8 @@ engine in the past and also for understanding how ``Rejewski & Turing Bombs`` wo
 cipher. According to the historians the breakage of ``Enigma`` shortened the war and saved millions of lives.
 A rare moment which the intellectual power really saved the day, rather different from this [one](http://xkcd.com/208/)!
 
+If you want to know more about the internal details of Enigma [here is a good source](http://www.codesandciphers.org.uk/enigma).
+
 ## How to build eel?
 
 In order to build this library you need [Hefesto](https://github.com/rafael-santiago/hefesto). Once ``Hefesto``
