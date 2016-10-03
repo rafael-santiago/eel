@@ -237,7 +237,7 @@ For this reason I will avoid detailing why and for what it should be used.
 
 **Table 2**: The ``Eel's Enigma geeks embedded dsl statements``
 
-|   ** Statement  **           |               ** Used for **                     |            ** Usage sample **         |
+|      **Statement**           |                **Used for**                      |          **Usage sample**             |
 |:----------------------------:|:------------------------------------------------:|:-------------------------------------:|
 | ``libeel_rotor(e, p)``       |        Accessing the internal rotor wiring       |       ``libeel_rotor(M3, l)``         |
 | ``libeel_rotor_inv(e, p)``   |       Accessing the inverse rotor wiring's path  |       ``libeel_rotor_inv(M3, m)``     |
