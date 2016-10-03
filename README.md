@@ -148,7 +148,7 @@ about it.
 |             ``reflector``          |         Guess what?          |
 
 
-**Beware**: All other fields accessing is by your own risk. I also think that you think that ``protected`` is for sissies. So...
+**Beware**: All other fields accessing is by your own risk. I also think that you think that ``protected`` are for sissies. So...
 
 The rotors can be set with: ``i``, ``ii``, ``iii``, ``iv``, ``v``, ``vi``, ``vii``, ``viii``. I really find roman numerals a
 monument in the name of Human stupidity but commonly the ``Enigma's rotors`` are expressed on this way. So is what we get!
