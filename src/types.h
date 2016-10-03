@@ -8,6 +8,12 @@
 #ifndef LIBEEL_TYPES_H
 #define LIBEEL_TYPES_H 1
 
+#ifdef __cplusplus
+
+extern "C" {
+
+#endif  // #ifdef __cplusplus
+
 typedef enum _libeel_rotor_t {
     i = 0, ii, iii, iv, v, vi, vii, viii
 }libeel_rotor_t;
@@ -47,5 +53,11 @@ typedef struct _libeel_enigma_ctx {
     libeel_ring_t gears_l_ring, gears_m_ring, gears_r_ring;
     libeel_rotor_display_t l_in, l_out;
 }libeel_enigma_ctx;
+
+#ifdef __cplusplus
+
+}
+
+#endif  //  #ifdef __cplusplus
 
 #endif

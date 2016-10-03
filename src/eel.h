@@ -34,6 +34,12 @@
 
 #define libeel_enigma_output(e) ( (e)->l_out )
 
+#ifdef __cplusplus
+
+extern "C" {
+
+#endif  // #ifdef __cplusplus
+
 int libeel_init_machine(libeel_enigma_ctx *enigma);
 
 char libeel_type(libeel_enigma_ctx *enigma);
@@ -41,5 +47,11 @@ char libeel_type(libeel_enigma_ctx *enigma);
 void libeel_del_enigma_ctx(libeel_enigma_ctx *enigma);
 
 libeel_enigma_ctx *libeel_new_enigma_ctx();
+
+#ifdef __cplusplus
+
+}
+
+#endif  // #ifdef __cplusplus
 
 #endif
