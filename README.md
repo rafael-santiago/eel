@@ -119,7 +119,8 @@ All dsl statements must be done over a well-allocated context. You can acquire i
     (...)
 ```
 
-If all ok the ``libeel_new_enigma_ctx()`` function will spit to you a valid memory place where you can make your mess.
+If all ok the ``libeel_new_enigma_ctx()`` function will spit to you a valid memory place (non-NULL) where you can make your
+mess.
 
 Facts about your just allocated machine:
 
@@ -153,9 +154,9 @@ about it.
 **Beware**: All other fields accessing is by your own risk. I also think that you think that ``protected`` are for sissies. So...
 
 The rotors can be set with: ``i``, ``ii``, ``iii``, ``iv``, ``v``, ``vi``, ``vii``, ``viii``. I really find roman numerals a
-monument in the name of Human stupidity but commonly the ``Enigma's rotors`` are expressed on this way. So is what we get!
+monument in the name of Human stupidity but commonly the ``Enigma's rotors`` are expressed on this way. So it is what we get!
 
-The reflectors can assume two values (all here at least until now is about U-boats, rememeber?): ``b`` and ``c``.
+The reflectors can assume two values (all here at least until now is about U-boats, remember?): ``b`` and ``c``.
 
 After allocating the memory slice for placing your ``Enigma`` you should initialise it by setting the rotors, the reflector,
 rotor positions, rotor rings, etc. Once all done you should confirm your new setting by calling ``libeel_init_machine``:
