@@ -234,7 +234,7 @@ Once the input signal defined:
 Now all you should do is to read the output signal (e.g.: the lamp which is currently on). However, the ``libeel_type()``
 also returns its result besides "turn-on" the output lamp.
 
-### Another dsl statements which final users should not worry about
+### Other dsl statements which final users should not worry about
 
 The **Table 2** gathers these statements. They were exposed in order to allow future extensions by everyone interested.
 For this reason I will avoid detailing why and for what it should be used.
