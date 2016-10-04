@@ -13,7 +13,7 @@ Do not be naive.
 Alternatively, ``Enigma`` has a strong historical value. Then here you can probe the library's source code
 for looking inside the ``U-boat Enigma's`` entrails. For figuring out the problem imposed by this cipher
 engine in the past and also for understanding how ``Rejewski & Turing Bombs`` worked in order to crack this
-cipher. According to the historians the breakage of ``Enigma`` shortened the war and saved millions of lives.
+cipher. According to the historians the cracking of ``Enigma`` shortened the war and saved millions of lives.
 A rare moment which the intellectual power really saved the day, rather different from this [one](http://xkcd.com/208/)!
 
 If you want to know more about the internal details of Enigma [here is a good source](http://www.codesandciphers.org.uk/enigma).
@@ -128,7 +128,7 @@ Facts about your just allocated machine:
 - Any rotor is picked as default.
 - All rotor rings are set to ``1`` (e.g.: ``A-A-A``).
 
-Okay kids, if we allocated something is important to release it. Even if your software does not stay running by hours.
+Okay kids, if we allocated something is important to release it. Even if your software does not stay running for hours.
 Programming good manners! So, for dealloc the enigma's context we should:
 
 ```c
@@ -171,11 +171,11 @@ rotor positions, rotor rings, etc. Once all done you should confirm your new set
     (...)
 ```
 
-### Accessing the machine components by its position
+### Accessing a machine component by its position
 
 If you know something about the ``Enigma`` maybe you should know that the current position of some component is meaningful.
 These components can assume three positions which are: ``left``, ``middle``, ``right``. In the ``Eel's embedded dsl``
-these positions are: ``l``eft, ``m``iddle, ``r``ight.
+these positions are: ``l``eft, ``m``iddle and ``r``ight.
 
 #### How to access the rotor rings?
 
@@ -197,7 +197,7 @@ I have decided not use letters for expressing the rings positions, so you can us
     libeel_plugboard(M3, 1).r = 'Z';
 ```
 
-As you should know, according to the ``U-boat`` specs there are six swaps pairs.
+As you should know, according to the ``U-boat`` specs there are six swap pairs.
 
 #### How to change a rotor position?
 
@@ -222,24 +222,24 @@ As you should know, according to the ``U-boat`` specs there are six swaps pairs.
     printf("%c", libeel_enigma_output(M3));
 ```
 
-#### How to effectively type thing on the machine?
+#### How to effectively type a thing on the machine?
 
-One the input signal defined:
+Once the input signal defined:
 
 ```c
     (...)
     libeel_type(M3);
 ```
 
-Now all you should do is to read the output signal (e.g.: the lamp On). However, the ``libeel_type()`` also
-returns its result besides "turn-on" the output lamp.
+Now all you should do is to read the output signal (e.g.: the lamp which is currently on). However, the ``libeel_type()``
+also returns its result besides "turn-on" the output lamp.
 
 ### Another dsl statements which final users should not worry about
 
 The **Table 2** gathers these statements. They were exposed in order to allow future extensions by everyone interested.
 For this reason I will avoid detailing why and for what it should be used.
 
-**Table 2**: The ``Eel's Enigma geek embedded dsl statements``.
+**Table 2**: The ``Eel's Enigma "über geek" embedded dsl statements``.
 
 |      **Statement**           |                **Used for**                      |          **Usage sample**             |
 |:----------------------------:|:------------------------------------------------:|:-------------------------------------:|
