@@ -302,7 +302,7 @@ char libeel_type(libeel_enigma_ctx *enigma) {
 
         libeel_refresh_display(&libeel_display(enigma, r));
 
-        if (spin && libeel_display(enigma, r) == libeel_notch(enigma, r)) {
+        if (spin || libeel_display(enigma, r) == libeel_notch(enigma, r)) {
             libeel_spin_rotor(libeel_rotor_offset(enigma, m));
 
             libeel_refresh_display(&libeel_display(enigma, m));
