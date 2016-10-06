@@ -212,6 +212,7 @@ CUTE_TEST_CASE_END
 CUTE_TEST_CASE(libeel_type_test)
     libeel_enigma_ctx *e_uboat = libeel_new_enigma_ctx();
     char *expected_outputs = "PXWIAFZZLY", *ep = NULL;
+    char *expected_display = "ABCDEFGHIJ", *ed = NULL;
     e_uboat->left_rotor = i;
     e_uboat->middle_rotor = ii;
     e_uboat->right_rotor = iii;
@@ -221,9 +222,10 @@ CUTE_TEST_CASE(libeel_type_test)
     e_uboat->reflector = b;
     CUTE_ASSERT(libeel_init_machine(e_uboat) == 1);
     libeel_enigma_input(e_uboat) = 'G';
-    for (ep = expected_outputs; *ep != 0; ep++) {
+    for (ep = expected_outputs, ed = expected_display; *ep != 0; ep++, ed++) {
         CUTE_ASSERT(libeel_type(e_uboat) == *ep);
         CUTE_ASSERT(libeel_enigma_output(e_uboat) == *ep);
+        CUTE_ASSERT(libeel_display(e_uboat, r) == *ed);
         printf("\t%c->%c [ok]\n", libeel_enigma_input(e_uboat), libeel_enigma_output(e_uboat));
     }
     libeel_del_enigma_ctx(e_uboat);
@@ -237,10 +239,11 @@ CUTE_TEST_CASE(libeel_type_test)
     libeel_rotor_at(e_uboat, r) = 'Z';
     e_uboat->reflector = b;
     CUTE_ASSERT(libeel_init_machine(e_uboat) == 1);
-    for (ep = expected_outputs; *ep != 0; ep++) {
+    for (ep = expected_outputs, ed = expected_display; *ep != 0; ep++, ed++) {
         libeel_enigma_input(e_uboat) = *ep;
         CUTE_ASSERT(libeel_type(e_uboat) == 'G');
         CUTE_ASSERT(libeel_enigma_output(e_uboat) == 'G');
+        CUTE_ASSERT(libeel_display(e_uboat, r) == *ed);
         printf("\t%c->%c [ok]\n", libeel_enigma_input(e_uboat), libeel_enigma_output(e_uboat));
     }
     libeel_del_enigma_ctx(e_uboat);

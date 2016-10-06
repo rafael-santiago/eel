@@ -391,7 +391,7 @@ static libeel_rotor_display_t libeel_get_rotor_signal(const libeel_rotor_wiring_
 }
 
 static void libeel_refresh_display(libeel_rotor_display_t *display) {
-    if (display != NULL) {
+    if (display == NULL) {
         return;
     }
 
