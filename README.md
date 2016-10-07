@@ -203,9 +203,9 @@ As you should know, according to the ``U-boat`` specs there are six swap pairs.
 
 ```c
     (...)
-    libeel_rotor(M3, l) = 'E';
-    libeel_rotor(M3, m) = 'E';
-    libeel_rotor(M3, r) = 'L';
+    libeel_rotor_at(M3, l) = 'E';
+    libeel_rotor_at(M3, m) = 'E';
+    libeel_rotor_at(M3, r) = 'L';
 ```
 
 #### How to set the input signal?
