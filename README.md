@@ -80,6 +80,8 @@ int main(int argc, char **argv) {
 
 ```
 
+By the way, you can find a more complete sample [here](https://github.com/rafael-santiago/ansiterm-enigma).
+
 ## The Eel's embedded dsl
 
 Well, basically the dsl exists in order to make the operations over the ``Eel's Enigma context`` easier. In fact, if you
