@@ -366,7 +366,7 @@ static void libeel_clear_enigma_ctx(libeel_enigma_ctx *enigma) {
     }
 }
 
-libeel_enigma_ctx *libeel_new_enigma_ctx() {
+libeel_enigma_ctx *libeel_new_enigma_ctx(void) {
     libeel_enigma_ctx *enigma = (libeel_enigma_ctx *)malloc(sizeof(libeel_enigma_ctx));
     libeel_clear_enigma_ctx(enigma);
     return enigma;

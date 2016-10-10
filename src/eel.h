@@ -46,7 +46,7 @@ char libeel_type(libeel_enigma_ctx *enigma);
 
 void libeel_del_enigma_ctx(libeel_enigma_ctx *enigma);
 
-libeel_enigma_ctx *libeel_new_enigma_ctx();
+libeel_enigma_ctx *libeel_new_enigma_ctx(void);
 
 #ifdef __cplusplus
 

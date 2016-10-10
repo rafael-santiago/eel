@@ -25,7 +25,7 @@ installed and working on your system you should jump to the ``eel's src`` sub-di
 there. Something like:
 
 ```
-agnes@Bleatchley:~/StationX/Hans-Thilo/Asché/leaks/eel/src# hefesto
+agnes@Bletchley:~/StationX/Hans-Thilo/Asché/leaks/eel/src# hefesto
 ```
 
 After running ``Hefesto`` the library will be built and some tests will run. A sub-directory called ``lib`` will be created
