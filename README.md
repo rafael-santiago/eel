@@ -11,8 +11,8 @@ pencil-and-paper cipher. You should never protect sensible data with  the ``Enig
 Do not be naive.
 
 Alternatively, ``Enigma`` has a strong historical value. Then here you can probe the library's source code
-for looking inside the ``U-boat Enigma's`` entrails. For figuring out the problem imposed by this cipher
-engine in the past and also for understanding how ``Rejewski & Turing Bombs`` worked in order to crack this
+to look inside the ``U-boat Enigma's`` entrails. In order to figure out the problem imposed by this cipher
+engine in the past and also to understand how ``Rejewski & Turing Bombs`` worked in order to crack this
 cipher. According to the historians the cracking of ``Enigma`` shortened the war and saved millions of lives.
 A rare moment which the intellectual power really saved the day, rather different from this [one](http://xkcd.com/208/)!
 
@@ -131,7 +131,7 @@ Facts about your just allocated machine:
 - All rotor rings are set to ``1`` (e.g.: ``A-A-A``).
 
 Okay kids, if we allocated something is important to release it. Even if your software does not stay running for hours.
-Programming good manners! So, for dealloc the enigma's context we should:
+Programming good manners! So, to deallocate the enigma's context we should:
 
 ```c
     (...)
@@ -153,7 +153,7 @@ about it.
 |             ``reflector``          |         Guess what?          |
 
 
-**Beware**: All other fields accessing is by your own risk. I also think that you think that ``protected`` are for sissies. So...
+**Beware**: All other fields accessing is by your own risk. I also think that you think that ``protected`` is for sissies. So...
 
 The rotors can be set with: ``i``, ``ii``, ``iii``, ``iv``, ``v``, ``vi``, ``vii``, ``viii``. I really find roman numerals a
 monument in the name of Human stupidity but commonly the ``Enigma's rotors`` are expressed on this way. So it is what we get!
@@ -188,7 +188,7 @@ these positions are: ``l``eft, ``m``iddle and ``r``ight.
     libeel_ring(M3, r) = 20;
 ```
 
-I have decided not use letters for expressing the rings positions, so you can use values between ``1`` and ``26``.
+I have decided not use letters to express the rings positions, so you can use values between ``1`` and ``26``.
 
 #### How to swap a plugboard linkage?
 

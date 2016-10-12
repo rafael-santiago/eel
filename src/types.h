@@ -24,7 +24,7 @@ typedef enum _libeel_reflector_t {
 
 struct libeel_plug_setting_ctx {
     char l, r;
-}libeel_plug_setting_ctx;
+};
 
 typedef struct _libeel_plugboard_ctx {
     struct libeel_plug_setting_ctx plug1, plug2, plug3, plug4, plug5, plug6;
