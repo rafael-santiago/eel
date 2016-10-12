@@ -50,6 +50,10 @@ __attribute__((weak)) libeel_enigma_ctx *libeel_new_enigma_ctx(void);
 
 __attribute__((weak)) void libeel_clear_enigma_ctx(libeel_enigma_ctx *enigma);
 
+__attribute__((weak)) void libeel_set_rotor(libeel_rotor_wiring_t rotor, libeel_rotor_wiring_t rotor_inv, const libeel_rotor_t r);
+
+__attribute__((weak)) void libeel_set_reflector(libeel_rotor_wiring_t reflector, const libeel_reflector_t r);
+
 #ifdef __cplusplus
 
 }

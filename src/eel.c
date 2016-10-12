@@ -126,8 +126,6 @@ static libeel_rotor_wiring_t g_basic_display = {
     'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
 };
 
-static void libeel_set_rotor(libeel_rotor_wiring_t rotor, libeel_rotor_wiring_t rotor_inv, const libeel_rotor_t r);
-
 static void libeel_set_rotor_position(libeel_rotor_wiring_t rotor, const libeel_rotor_display_t stop);
 
 static void libeel_spin_rotor(libeel_rotor_wiring_t rotor);
@@ -135,8 +133,6 @@ static void libeel_spin_rotor(libeel_rotor_wiring_t rotor);
 static void libeel_spin_rotor_l(libeel_rotor_wiring_t rotor);
 
 static void libeel_set_plugboard(libeel_enigma_ctx *enigma);
-
-static void libeel_set_reflector(libeel_rotor_wiring_t reflector, const libeel_reflector_t r);
 
 static libeel_rotor_display_t libeel_get_rotor_signal(const libeel_rotor_wiring_t rotor_offset, const libeel_rotor_wiring_t rotor, const char input);
 
@@ -204,7 +200,7 @@ int libeel_init_machine(libeel_enigma_ctx *enigma) {
     return 1;
 }
 
-static void libeel_set_rotor(libeel_rotor_wiring_t rotor, libeel_rotor_wiring_t rotor_inv, const libeel_rotor_t r) {
+__attribute__((weak)) void libeel_set_rotor(libeel_rotor_wiring_t rotor, libeel_rotor_wiring_t rotor_inv, const libeel_rotor_t r) {
     memcpy(rotor, g_rotor_wiring[r % g_rotor_wiring_nr].normal, sizeof(libeel_rotor_wiring_t));
     memcpy(rotor_inv, g_rotor_wiring[r % g_rotor_wiring_nr].inverse, sizeof(libeel_rotor_wiring_t));
 }
@@ -272,7 +268,7 @@ static void libeel_set_plugboard(libeel_enigma_ctx *enigma) {
     }
 }
 
-static void libeel_set_reflector(libeel_rotor_wiring_t reflector, const libeel_reflector_t r) {
+__attribute__((weak)) void libeel_set_reflector(libeel_rotor_wiring_t reflector, const libeel_reflector_t r) {
     memcpy(reflector, g_reflector[r % g_reflector_nr], sizeof(libeel_rotor_wiring_t));
 }
 
