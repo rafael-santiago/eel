@@ -138,8 +138,6 @@ static void libeel_set_plugboard(libeel_enigma_ctx *enigma);
 
 static void libeel_set_reflector(libeel_rotor_wiring_t reflector, const libeel_reflector_t r);
 
-static void libeel_clear_enigma_ctx(libeel_enigma_ctx *enigma);
-
 static libeel_rotor_display_t libeel_get_rotor_signal(const libeel_rotor_wiring_t rotor_offset, const libeel_rotor_wiring_t rotor, const char input);
 
 static void libeel_refresh_display(libeel_rotor_display_t *display);
@@ -350,14 +348,14 @@ char libeel_type(libeel_enigma_ctx *enigma) {
     return outchar;
 }
 
-void libeel_del_enigma_ctx(libeel_enigma_ctx *enigma) {
+__attribute__((weak)) void libeel_del_enigma_ctx(libeel_enigma_ctx *enigma) {
     if (enigma != NULL) {
         libeel_clear_enigma_ctx(enigma);
         free(enigma);
     }
 }
 
-static void libeel_clear_enigma_ctx(libeel_enigma_ctx *enigma) {
+__attribute__((weak)) void libeel_clear_enigma_ctx(libeel_enigma_ctx *enigma) {
     if (enigma != NULL) {
         memset(enigma, 0, sizeof(libeel_enigma_ctx));
         libeel_ring(enigma, l) = 1;
@@ -366,7 +364,7 @@ static void libeel_clear_enigma_ctx(libeel_enigma_ctx *enigma) {
     }
 }
 
-libeel_enigma_ctx *libeel_new_enigma_ctx(void) {
+__attribute__((weak)) libeel_enigma_ctx *libeel_new_enigma_ctx(void) {
     libeel_enigma_ctx *enigma = (libeel_enigma_ctx *)malloc(sizeof(libeel_enigma_ctx));
     libeel_clear_enigma_ctx(enigma);
     return enigma;

@@ -44,9 +44,11 @@ int libeel_init_machine(libeel_enigma_ctx *enigma);
 
 char libeel_type(libeel_enigma_ctx *enigma);
 
-void libeel_del_enigma_ctx(libeel_enigma_ctx *enigma);
+__attribute__((weak)) void libeel_del_enigma_ctx(libeel_enigma_ctx *enigma);
 
-libeel_enigma_ctx *libeel_new_enigma_ctx(void);
+__attribute__((weak)) libeel_enigma_ctx *libeel_new_enigma_ctx(void);
+
+__attribute__((weak)) void libeel_clear_enigma_ctx(libeel_enigma_ctx *enigma);
 
 #ifdef __cplusplus
 
