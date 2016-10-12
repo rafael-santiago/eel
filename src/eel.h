@@ -54,6 +54,8 @@ __attribute__((weak)) void libeel_set_rotor(libeel_rotor_wiring_t rotor, libeel_
 
 __attribute__((weak)) void libeel_set_reflector(libeel_rotor_wiring_t reflector, const libeel_reflector_t r);
 
+__attribute__((weak)) libeel_rotor_display_t libeel_get_rotor_signal(const libeel_rotor_wiring_t rotor_offset, const libeel_rotor_wiring_t rotor, const char input);
+
 #ifdef __cplusplus
 
 }

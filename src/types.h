@@ -54,6 +54,11 @@ typedef struct _libeel_enigma_ctx {
     libeel_rotor_display_t l_in, l_out;
 }libeel_enigma_ctx;
 
+struct libeel_rotor_wiring_ctx {
+    libeel_rotor_wiring_t normal, inverse;
+    libeel_notch_t notch;
+};
+
 #ifdef __cplusplus
 
 }

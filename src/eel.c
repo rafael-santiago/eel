@@ -10,12 +10,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-struct libeel_rotor_wiring_ctx {
-    libeel_rotor_wiring_t normal, inverse;
-    libeel_notch_t notch;
-};
-
-static struct libeel_rotor_wiring_ctx g_rotor_wiring[] = {
+__attribute__((weak)) struct libeel_rotor_wiring_ctx g_rotor_wiring[] = {
     {
         {
             'E', 'K', 'M', 'F', 'L', 'G', 'D', 'Q', 'V', 'Z', 'N', 'T', 'O',
@@ -106,9 +101,9 @@ static struct libeel_rotor_wiring_ctx g_rotor_wiring[] = {
     }
 };
 
-static size_t g_rotor_wiring_nr = sizeof(g_rotor_wiring) / sizeof(g_rotor_wiring[0]);
+__attribute__((weak)) size_t g_rotor_wiring_nr = sizeof(g_rotor_wiring) / sizeof(g_rotor_wiring[0]);
 
-static libeel_rotor_wiring_t g_reflector[] = {
+__attribute__((weak)) libeel_rotor_wiring_t g_reflector[] = {
     {
         'Y', 'R', 'U', 'H', 'Q', 'S', 'L', 'D', 'P', 'X', 'N', 'G', 'O',
         'K', 'M', 'I', 'E', 'R', 'F', 'Z', 'C', 'W', 'V', 'J', 'A', 'T'
@@ -119,9 +114,9 @@ static libeel_rotor_wiring_t g_reflector[] = {
     }
 };
 
-static size_t g_reflector_nr = sizeof(g_reflector) / sizeof(g_reflector[0]);
+__attribute__((weak)) size_t g_reflector_nr = sizeof(g_reflector) / sizeof(g_reflector[0]);
 
-static libeel_rotor_wiring_t g_basic_display = {
+__attribute__((weak)) libeel_rotor_wiring_t g_basic_display = {
     'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
     'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
 };
@@ -133,8 +128,6 @@ static void libeel_spin_rotor(libeel_rotor_wiring_t rotor);
 static void libeel_spin_rotor_l(libeel_rotor_wiring_t rotor);
 
 static void libeel_set_plugboard(libeel_enigma_ctx *enigma);
-
-static libeel_rotor_display_t libeel_get_rotor_signal(const libeel_rotor_wiring_t rotor_offset, const libeel_rotor_wiring_t rotor, const char input);
 
 static void libeel_refresh_display(libeel_rotor_display_t *display);
 
@@ -149,12 +142,6 @@ int libeel_init_machine(libeel_enigma_ctx *enigma) {
     }
 
     if (!libeel_setting_sanity_check(enigma)) {
-        return 0;
-    }
-
-    if (enigma->left_rotor   == enigma->right_rotor  ||
-        enigma->left_rotor   == enigma->middle_rotor ||
-        enigma->middle_rotor == enigma->right_rotor) {
         return 0;
     }
 
@@ -366,7 +353,7 @@ __attribute__((weak)) libeel_enigma_ctx *libeel_new_enigma_ctx(void) {
     return enigma;
 }
 
-static libeel_rotor_display_t libeel_get_rotor_signal(const libeel_rotor_wiring_t rotor_offset, const libeel_rotor_wiring_t rotor, const char input) {
+__attribute__((weak)) libeel_rotor_display_t libeel_get_rotor_signal(const libeel_rotor_wiring_t rotor_offset, const libeel_rotor_wiring_t rotor, const char input) {
     int r;
 
     for (r = 0; r < 26; r++) {
