@@ -4,14 +4,14 @@
 
 It is about a *C* library that intends to help on abstracting ``Enigma machines`` implementations.
 
-``Eel`` emulates the ``U-boat Enigma`` behavior, the enigma which was cracked by ``Alan Turing`` during the ``WWII``.
+``Eel`` emulates the ``M3 Enigma`` behavior, the basic Enigma which was cracked by ``Alan Turing`` during the ``WWII``.
 
 Of course that you should use it only for fun issues. In fact the ``Enigma`` machine nowadays is a
 pencil-and-paper cipher. You should never protect sensible data with  the ``Enigma`` cipher.
 Do not be naive.
 
 Alternatively, ``Enigma`` has a strong historical value. Then here you can probe the library's source code
-to look inside the ``U-boat Enigma's`` entrails. In order to figure out the problem imposed by this cipher
+to look inside the ``M3 Enigma's`` entrails. In order to figure out the problem imposed by this cipher
 engine in the past and also to understand how ``Rejewski & Turing Bombs`` worked in order to crack this
 cipher. According to the historians the cracking of ``Enigma`` shortened the war and saved millions of lives.
 A rare moment which the intellectual power really saved the day, rather different from this [one](http://xkcd.com/208/)!
@@ -35,7 +35,7 @@ too. Inside this sub-directory you should find the file ``libeel.a``. You will u
 
 I am assuming that you know (at least) the general idea of how ``Enigma`` machines work... okay?
 
-As previously said ``Eel`` is a library which implements the ``M3`` (``Naval/U-boat``) ``Enigma``. However, it implements
+As previously said ``Eel`` is a library which implements the ``M3 Enigma``. However, it implements
 a very simple embedded ``dsl`` in order to abstract the machine's setting and also its operation.
 
 These are the basic steps to use ``Eel`` inside your code stuff:
@@ -161,7 +161,7 @@ about it.
 The rotors can be set with: ``i``, ``ii``, ``iii``, ``iv``, ``v``, ``vi``, ``vii``, ``viii``. I really find roman numerals a
 monument in the name of Human stupidity but commonly the ``Enigma's rotors`` are expressed on this way. So it is what we get!
 
-The reflectors can assume two values (all here at least until now is about U-boats, remember?): ``b`` and ``c``.
+The reflectors can assume two values (all here at least until now is about M3, remember?): ``b`` and ``c``.
 
 After allocating the memory slice for placing your ``Enigma`` you should initialise it by setting the rotors, the reflector,
 rotor positions, rotor rings, etc. Once all done you should confirm your new setting by calling ``libeel_init_machine``:
@@ -202,7 +202,7 @@ I have decided not use letters to express the rings positions, so you can use va
     libeel_plugboard(M3, 1).r = 'Z';
 ```
 
-As you should know, according to the ``U-boat`` specs there are six swap pairs.
+As you should know, according to the ``M3`` specs there are ten swap pairs.
 
 #### How to change a rotor position?
 
