@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-__attribute__((weak)) struct libeel_rotor_wiring_ctx g_rotor_wiring[] = {
+struct libeel_rotor_wiring_ctx g_rotor_wiring[] = {
     {
         {
             'E', 'K', 'M', 'F', 'L', 'G', 'D', 'Q', 'V', 'Z', 'N', 'T', 'O',
@@ -101,9 +101,9 @@ __attribute__((weak)) struct libeel_rotor_wiring_ctx g_rotor_wiring[] = {
     }
 };
 
-__attribute__((weak)) size_t g_rotor_wiring_nr = sizeof(g_rotor_wiring) / sizeof(g_rotor_wiring[0]);
+size_t g_rotor_wiring_nr = sizeof(g_rotor_wiring) / sizeof(g_rotor_wiring[0]);
 
-__attribute__((weak)) libeel_rotor_wiring_t g_reflector[] = {
+libeel_rotor_wiring_t g_reflector[] = {
     {
         'Y', 'R', 'U', 'H', 'Q', 'S', 'L', 'D', 'P', 'X', 'N', 'G', 'O',
         'K', 'M', 'I', 'E', 'R', 'F', 'Z', 'C', 'W', 'V', 'J', 'A', 'T'
@@ -114,9 +114,9 @@ __attribute__((weak)) libeel_rotor_wiring_t g_reflector[] = {
     }
 };
 
-__attribute__((weak)) size_t g_reflector_nr = sizeof(g_reflector) / sizeof(g_reflector[0]);
+size_t g_reflector_nr = sizeof(g_reflector) / sizeof(g_reflector[0]);
 
-__attribute__((weak)) libeel_rotor_wiring_t g_basic_display = {
+libeel_rotor_wiring_t g_basic_display = {
     'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
     'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
 };
