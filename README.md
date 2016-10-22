@@ -14,7 +14,7 @@ Alternatively, ``Enigma`` has a strong historical value. Then here you can probe
 to look inside the ``M3 Enigma's`` entrails. In order to figure out the problem imposed by this cipher
 engine in the past and also to understand how ``Rejewski & Turing Bombs`` worked in order to crack this
 cipher. According to the historians the cracking of ``Enigma`` shortened the war and saved millions of lives.
-A rare moment which the intellectual power really saved the day, rather different from this [one](http://xkcd.com/208/)!
+A rare moment which the intellectual power really saved the day, rather different from this another [one](http://xkcd.com/208/)!
 
 If you want to know more about the internal details of Enigma [here is a good source](http://www.codesandciphers.org.uk/enigma).
 
